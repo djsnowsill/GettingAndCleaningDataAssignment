@@ -11,9 +11,11 @@ loadTidyDataSet <- function(dataSetType){
   # Read Feature Labels into Data Frame
   featureLabels <- read.table("./UCI HAR Dataset/features.txt", sep=" ", col.names=c("feature_id","feature_label")) 
   
-  # Remove invalid characters from feature labels
-  featureLabels$feature_label <- gsub("-", "_", featureLabels$feature_label)
-  featureLabels$feature_label <- gsub("\\(\\)", "", featureLabels$feature_label)
+  # Remove invalid characters and beautify feature labels
+  featureLabels$feature_label <- gsub("-", "_", featureLabels$feature_label) # convert - to _
+  featureLabels$feature_label <- gsub("\\(\\)", "", featureLabels$feature_label) # remove brackets
+  featureLabels$feature_label <- gsub("^f", "Freq", featureLabels$feature_label)       # f to Freq
+  featureLabels$feature_label <- gsub("^t", "Time", featureLabels$feature_label)       # t to Time
   
   # Read Subjects Vector
   subjects <- read.table(sprintf("./UCI HAR Dataset/%s/subject_%s.txt", dataSetType, dataSetType), sep=" ", col.names=c("subject_id")) 
@@ -68,10 +70,12 @@ trainMeasurements <- loadTidyDataSet("train")
 # Merge Test and Training Sets together
 measurements <- bind_rows(testMeasurements, trainMeasurements)
 
+# Take Average of Subject and Activity Measurements and use for new Data Frame
 summary <- aggregate(measurements[, 3:68], list(measurements$activity_label, measurements$subject_id), mean)
-colnames(summary)[1] <- "activity"
-colnames(summary)[2] <- "subject"
+colnames(summary)[1] <- "Activity"
+colnames(summary)[2] <- "SubjectId"
 
+# Output Summary Tidy Data Set as DatasetHumanActivityRecognitionUsingSmartphones.txt
 write.table(file="DatasetHumanActivityRecognitionUsingSmartphones.txt",row.names=FALSE,x=summary)
 
 
