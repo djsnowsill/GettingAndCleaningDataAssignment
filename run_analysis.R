@@ -63,7 +63,7 @@ if( !file.exists("dataset.zip"))
 # Download and unzip dataset.zip from Web
 unzip("dataset.zip")
 
-# Load Test and Training Sets
+# Load Tidy Test and Training Sets
 testMeasurements <- loadTidyDataSet("test")
 trainMeasurements <- loadTidyDataSet("train")
 
@@ -77,6 +77,9 @@ colnames(summary)[2] <- "SubjectId"
 
 # Output Summary Tidy Data Set as DatasetHumanActivityRecognitionUsingSmartphones.txt
 write.table(file="DatasetHumanActivityRecognitionUsingSmartphones.txt",row.names=FALSE,x=summary)
+
+# Output Column Names as basis of CodeBook
+#write.table(file="codebook.initial.md",row.names=FALSE,x=colnames(summary))
 
 
 
