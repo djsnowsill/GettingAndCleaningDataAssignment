@@ -1,5 +1,5 @@
-GettingAndCleaningData
-======================
+Getting And Cleaning Data Assignment
+====================================
 
 Repository for Cousera: https://class.coursera.org/getdata-015
 
