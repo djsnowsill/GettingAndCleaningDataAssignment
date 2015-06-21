@@ -1,5 +1,5 @@
- Code Book for 'DatasetHumanActivityRecognitionUsingSmartphones.txt'
- ===================================================================
+## Code Book for 'DatasetHumanActivityRecognitionUsingSmartphones.txt'
+
  
  Variable Name | Variable Type  | Values | Description
  ------------- | -------------  | ------------- | ------------- 
