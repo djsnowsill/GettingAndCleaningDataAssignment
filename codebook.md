@@ -1,3 +1,6 @@
+ Code Book for 'DatasetHumanActivityRecognitionUsingSmartphones.txt'
+ ===================================================================
+ 
  Variable Name | Variable Type  | Values | Description
  ------------- | -------------  | ------------- | ------------- 
  Activity  | factor with 6 levels        | WALKING, WALKING\_UPSTAIRS, WALKING\_DOWNSTAIRS, SITTING, STANDING, LAYING | Links the class labels with their activity name. 
