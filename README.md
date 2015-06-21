@@ -55,3 +55,8 @@ How the run_analysis.R script works
 
 > The script contains extensive comments which explains what the script is doing
 
+> Please note that this script relies on dplyr which is installed by the script if it is not available
+
+> This script downloads the necessary raw data files so they are not required to be downloaded by the user
+
+
