@@ -1,7 +1,7 @@
  Variable Name | Variable Type  | Values | Description
  ------------- | -------------  | ------------- | ------------- 
- Activity  | factor with 6 levels        | WALKING, WALKING\_UPSTAIRS, WALKING\_DOWNSTAIRS, SITTING, STANDING, LAYING | Links the class labels with their activity name. (from: https://github.com/dholtz/GettingAndCleaningData/blob/master/project_data/activity_labels.txt)
- SubjectId       | numerical      | 1:30         | Subject id numbers
+ Activity  | factor with 6 levels        | WALKING, WALKING\_UPSTAIRS, WALKING\_DOWNSTAIRS, SITTING, STANDING, LAYING | Links the class labels with their activity name. 
+ SubjectId       | numerical      | 1:30         | Subject identification numbers
 **Features/Measures** | **numeric** | **Features/Measures are normalized and bounded within [-1,1].** | **Mean or standard deviation of the triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration**
 FreqBodyAcc_mean_X | | |
 FreqBodyAcc_mean_Y | | |
