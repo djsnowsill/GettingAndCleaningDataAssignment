@@ -1,7 +1,7 @@
 Getting And Cleaning Data Assignment
 ====================================
 
-Repository for Cousera: https://class.coursera.org/getdata-015
+Repository for Coursera: https://class.coursera.org/getdata-015
 
 > run_analysis.R should do the following:
    
@@ -49,7 +49,7 @@ Running the run_analysis.R script
 
 > 6) source("run_analysis.R") 
 
-How the, run_analysis.R script works
+How the run_analysis.R script works
 ====================================
 > Review the run_analysis.R script in the root of the cloned repository.
 
